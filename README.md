@@ -2,6 +2,36 @@
 
 A practice project for learning and demonstrating JavaScript, TypeScript, and React fundamentals through interactive components.
 
+## Quick Start (5 minutes)
+
+Get up and running immediately to see the project in action:
+
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+2. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+3. **Open in browser**
+   - Navigate to http://localhost:5173
+   - The app will open with tab navigation
+
+4. **Try the completed components**
+   - **Counter**: Click +/- buttons and reset
+   - **Todo List**: Add, complete, and delete todos
+   - **User Card**: See API integration with loading states
+
+5. **Start practicing**
+   - Pick a practice component (WeatherWidget, ShoppingCart, FormValidator, or DataTable)
+   - Open the component file and follow the TODO comments
+   - Implement step-by-step with the provided guidance
+
+**Ready to code?** Jump to [Practice Components](#practice-components-implementation-required) below!
+
 ## Overview
 
 This project showcases common React patterns and TypeScript usage through three interactive components:

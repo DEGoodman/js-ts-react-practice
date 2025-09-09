@@ -14,7 +14,7 @@
     "test:run": "vitest run",
     "test:coverage": "vitest --coverage",
     "test:watch": "vitest --watch",
-    "test:file": "vitest --run --reporter=verbose"
+    "test:file": "vitest --run --reporter=verbose --"
   },
   "dependencies": {
     "react": "^18.2.0",
