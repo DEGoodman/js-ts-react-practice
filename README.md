@@ -22,33 +22,79 @@ This project showcases common React patterns and TypeScript usage through three 
 ```
 src/
 ├── components/
-│   ├── Counter.tsx      # Simple counter with state management
-│   ├── TodoList.tsx     # Todo list with CRUD operations
-│   └── UserCard.tsx     # API data fetching component
-├── App.tsx              # Main app with tab navigation
-├── App.css              # Application styles
-├── main.tsx             # React app entry point
-└── index.css            # Global styles
+│   ├── Counter.tsx       # Simple counter with state management
+│   ├── TodoList.tsx      # Todo list with CRUD operations
+│   ├── UserCard.tsx      # API data fetching component
+│   ├── WeatherWidget.tsx # Weather API integration (practice)
+│   ├── ShoppingCart.tsx  # E-commerce cart functionality (practice)
+│   ├── FormValidator.tsx # Form validation with useReducer (practice)
+│   └── DataTable.tsx     # Data manipulation and pagination (practice)
+├── App.tsx               # Main app with tab navigation
+├── App.css               # Application styles
+├── main.tsx              # React app entry point
+└── index.css             # Global styles
 ```
 
 ## Components
 
-### Counter Component
+### Implemented Components (Ready to Use)
+
+#### Counter Component
 - Demonstrates basic state management with `useState`
 - Increment, decrement, and reset functionality
 - Inline styling patterns
 
-### Todo List Component
+#### Todo List Component
 - TypeScript interfaces for type safety
 - Array state management (add, toggle, delete)
 - Form handling and keyboard events
 - Conditional rendering
 
-### User Card Component
+#### User Card Component
 - API integration with JSONPlaceholder
 - Loading states and error handling
 - `useEffect` for side effects
 - Async/await patterns
+
+### Practice Components (Implementation Required)
+
+These components contain detailed instructional comments and TODO items to guide your implementation:
+
+#### WeatherWidget Component
+**Learning Focus**: API Integration, Error Handling, Data Transformation
+- Practice async/await patterns with proper error handling
+- Implement loading and error states
+- Work with useEffect dependencies
+- Temperature unit conversion logic
+- Mock API integration with setTimeout
+- **Key Concepts**: TypeScript interfaces, conditional rendering, data formatting
+
+#### ShoppingCart Component
+**Learning Focus**: Complex State Management, Performance Optimization
+- Manage arrays of objects with CRUD operations
+- Practice useMemo for performance optimization
+- Implement filtering and category selection
+- Calculate derived state (totals, quantities)
+- Product catalog with add/remove functionality
+- **Key Concepts**: useMemo, array methods, state calculations, component composition
+
+#### FormValidator Component
+**Learning Focus**: Advanced State Management, Form Validation
+- Practice useReducer for complex state management
+- Implement comprehensive form validation
+- Real-time validation feedback
+- TypeScript discriminated unions for actions
+- Handle form submission with async operations
+- **Key Concepts**: useReducer, validation patterns, TypeScript action types, controlled components
+
+#### DataTable Component
+**Learning Focus**: Data Manipulation, Table Interactions
+- Filter, sort, and paginate large datasets
+- Implement row selection and bulk operations
+- Practice with complex data transformations
+- Performance optimization for large lists
+- Advanced user interactions (sorting, filtering)
+- **Key Concepts**: useMemo, useCallback, data transformation, table accessibility
 
 ## Getting Started
 
@@ -96,11 +142,42 @@ This project helps practice:
 
 - React functional components and hooks
 - TypeScript type definitions and interfaces  
-- State management patterns
+- State management patterns (useState, useReducer)
 - API integration and async operations
 - Event handling and user interactions
+- Performance optimization (useMemo, useCallback)
+- Form validation and user input handling
+- Data manipulation and transformation
 - Modern JavaScript features (ES6+)
 - Build tools and development workflow
+
+## Practice Implementation Guide
+
+### Getting Started with Practice Components
+
+1. **Choose a component** based on your current skill level:
+   - **Beginner**: Start with WeatherWidget for basic API integration
+   - **Intermediate**: Try ShoppingCart for state management practice
+   - **Advanced**: Implement FormValidator or DataTable for complex patterns
+
+2. **Follow the TODO comments** in each component file - they provide step-by-step guidance
+
+3. **Read the learning objectives** at the bottom of each component file
+
+4. **Test your implementation** by adding the component to App.tsx navigation
+
+### Implementation Tips
+
+- Read through the entire component file before starting
+- Implement interfaces and types first
+- Follow the TODO comments in order
+- Test each piece of functionality as you build it
+- Don't hesitate to look up React/TypeScript documentation
+- Compare your implementation with the existing completed components
+
+### Bonus Challenges
+
+Each practice component includes bonus challenges at the bottom for additional learning opportunities once you complete the basic implementation.
 
 ## Browser Support
 
