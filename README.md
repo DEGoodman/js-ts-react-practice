@@ -119,11 +119,34 @@ npm run dev
 ### Available Scripts
 
 ```bash
-npm run dev         # Start development server
-npm run build       # Build for production
-npm run preview     # Preview production build
-npm run lint        # Run ESLint
-npm run type-check  # Run TypeScript type checking
+npm run dev           # Start development server
+npm run build         # Build for production
+npm run preview       # Preview production build
+npm run lint          # Run ESLint
+npm run type-check    # Run TypeScript type checking
+
+# Testing Scripts
+npm test              # Run tests in watch mode
+npm run test:run      # Run all tests once
+npm run test:ui       # Run tests with UI interface
+npm run test:coverage # Run tests with coverage report
+npm run test:watch    # Run tests in watch mode (alias for npm test)
+npm run test:file     # Run specific test file (use with file pattern)
+```
+
+### Testing Individual Files
+
+To test specific components or files:
+
+```bash
+# Test a specific component
+npm run test:file Counter
+
+# Test multiple related files
+npm run test:file "Counter|TodoList"
+
+# Test all files in a directory
+npm run test:file "__tests__"
 ```
 
 ## Development
@@ -178,6 +201,137 @@ This project helps practice:
 ### Bonus Challenges
 
 Each practice component includes bonus challenges at the bottom for additional learning opportunities once you complete the basic implementation.
+
+## Testing
+
+This project uses **Vitest** and **React Testing Library** for comprehensive component testing.
+
+### Test Structure
+
+```
+src/
+├── components/
+│   ├── __tests__/
+│   │   ├── Counter.test.tsx        # ✅ Complete test suite
+│   │   ├── TodoList.test.tsx       # ✅ Complete test suite
+│   │   ├── UserCard.test.tsx       # ✅ Complete test suite
+│   │   ├── WeatherWidget.test.tsx  # 🔄 Practice test stubs
+│   │   ├── ShoppingCart.test.tsx   # 🔄 Practice test stubs
+│   │   ├── FormValidator.test.tsx  # 🔄 Practice test stubs
+│   │   └── DataTable.test.tsx      # 🔄 Practice test stubs
+│   └── ...
+├── test/
+│   └── setup.ts                    # Test configuration
+└── vitest.config.ts                # Vitest configuration
+```
+
+### Running Tests
+
+```bash
+# Install dependencies first
+npm install
+
+# Run tests in watch mode (recommended for development)
+npm test
+
+# Run tests once and exit
+npm run test:run
+
+# Run tests with coverage report
+npm run test:coverage
+
+# Run tests with UI interface (browser-based)
+npm run test:ui
+
+# Test specific components
+npm run test:file Counter
+npm run test:file "Counter|TodoList"
+```
+
+### Completed Component Tests
+
+The following components have comprehensive test suites you can study:
+
+#### Counter Component Tests
+- ✅ Initial rendering and state
+- ✅ Button interactions (increment, decrement, reset)
+- ✅ State management and updates
+- ✅ Accessibility structure
+- ✅ Multiple operation sequences
+
+#### TodoList Component Tests
+- ✅ Adding todos (button click and Enter key)
+- ✅ Input validation and trimming
+- ✅ Todo completion toggling
+- ✅ Todo deletion
+- ✅ Multiple todo management
+- ✅ Empty state handling
+- ✅ Accessibility and keyboard navigation
+
+#### UserCard Component Tests
+- ✅ Loading states
+- ✅ API integration with fetch mocking
+- ✅ Error handling and retry functionality
+- ✅ User data display
+- ✅ Refresh functionality
+- ✅ Random user ID generation testing
+
+### Practice Component Test Stubs
+
+The practice components include test stubs with detailed TODO comments to guide your testing implementation:
+
+#### WeatherWidget Tests (Practice)
+- 🔄 API integration testing
+- 🔄 Loading and error states
+- 🔄 Temperature unit conversion
+- 🔄 Retry functionality
+- 🔄 City change handling
+
+#### ShoppingCart Tests (Practice)
+- 🔄 Product display and filtering
+- 🔄 Cart operations (add, remove, quantity)
+- 🔄 Total calculations with useMemo
+- 🔄 Category filtering
+- 🔄 State persistence during operations
+
+#### FormValidator Tests (Practice)
+- 🔄 Form validation rules
+- 🔄 Real-time validation feedback
+- 🔄 useReducer state management testing
+- 🔄 Form submission and loading states
+- 🔄 Error state management
+
+#### DataTable Tests (Practice)
+- 🔄 Data filtering and searching
+- 🔄 Column sorting functionality
+- 🔄 Pagination controls
+- 🔄 Row selection and bulk operations
+- 🔄 Performance optimization testing
+
+### Getting Started with Testing Practice Components
+
+1. **Remove `.skip`** from the describe block in the test file you want to work on
+2. **Follow the TODO comments** in each test - they provide step-by-step guidance
+3. **Run tests in watch mode** to get immediate feedback: `npm test`
+4. **Implement one test at a time** - start with basic rendering tests
+5. **Study the completed tests** for patterns and best practices
+
+### Testing Best Practices
+
+- **Test user behavior**, not implementation details
+- **Use semantic queries** (`getByRole`, `getByLabelText`) over `getByTestId`
+- **Test accessibility** - ensure components work with screen readers and keyboards
+- **Mock external dependencies** (APIs, timers) for reliable tests
+- **Write descriptive test names** that explain what behavior is being tested
+- **Group related tests** in describe blocks for better organization
+
+### Testing Tools Used
+
+- **Vitest**: Fast test runner with ES modules support
+- **React Testing Library**: User-centric testing utilities
+- **jsdom**: Browser environment simulation for tests
+- **@testing-library/user-event**: Realistic user interaction simulation
+- **@testing-library/jest-dom**: Additional DOM matchers
 
 ## Browser Support
 
